@@ -10,11 +10,7 @@ query_delete($query) - Delete rows in a table.
 # Default Configuration
 configuration.php:
 [SQL]
-// Your MySQL Host
 host = localhost
-// Your MySQL Username
 user = root
-// Your MySQL Password
 password = 
-// Your Database Name
 dbname = socialnetwork
