@@ -2,10 +2,10 @@
 
     class Database {
 
-        protected $dbName = 'class_test';
-        protected $dbUser = 'root';
+        protected $dbName = '';
+        protected $dbUser = '';
         protected $dbPass = '';
-        protected $dbHost = 'localhost';
+        protected $dbHost = '';
         
         protected $dbOptions = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
         
