@@ -1,22 +1,26 @@
-# PHP-PDO-Database-Class
-Makes connecting to your database and executing MySQL statements easier.
+# PHP PDO MySQL Class
+Connect and execute queries/updates with ease.
 
-# Available Functions
-query_select($query) - Select from a table and then use the data.
-
-query_insert($query, $query_params) - Insert into a table. $query_params are optional.
-
-query_update($query) - Update rows in a table.
-
-query_delete($query) - Delete rows in a table.
-
-# Default Configuration
-[SQL]
-
-host = localhost
-
-user = root
-
-password = 
-
-dbname = database_name
+#Example
+<?php
+    // Require your file
+    require("database.class.php");
+    
+    // Create a new instance of database
+    $database = new database();
+    
+    // Set our query variable
+    $query = "SELECT * FROM users WHERE username='" . $username . "'";
+    
+    // Use specific function
+    $result = $database->query_select($query);
+    
+    foreach($result as $row) {
+    	$firstname = $row['firstname'];
+    	$lastname = $row['lastname'];
+    }
+    
+    if($result != NULL) {
+    	echo 'My first name is: ', $firstname, '.';
+    	echo 'My last name is: ', $lastname, '.';
+    }
