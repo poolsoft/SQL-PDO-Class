@@ -2,7 +2,7 @@
 Connect and execute queries/updates with ease.
 
 #Example
-<?php
+`<?php
     // Require your file
     require("database.class.php");
     
@@ -23,4 +23,4 @@ Connect and execute queries/updates with ease.
     if($result != NULL) {
     	echo 'My first name is: ', $firstname, '.';
     	echo 'My last name is: ', $lastname, '.';
-    }
+    }`
