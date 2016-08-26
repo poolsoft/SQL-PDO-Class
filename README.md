@@ -2,18 +2,19 @@
 Connect and execute queries/updates with ease.
 
 #Example
-    // Require your file
+    // Grab the class
     require("database.class.php");
     
-    // Create a new instance of database
+    // Create a new instance of the class
     $database = new database();
     
-    // Set our query variable
+    // (Optional) Create a query variable
     $query = "SELECT * FROM users WHERE username='" . $username . "'";
     
-    // Use specific function
+    // Execute your statement
     $result = $database->query_select($query);
     
+    // Use your data!
     foreach($result as $row) {
     	$firstname = $row['firstname'];
     	$lastname = $row['lastname'];
