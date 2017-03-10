@@ -26,7 +26,7 @@
         	}
         }
         
-        public function query_select($query) {
+        public function query($query) {
         	try {
         		$this->query = $this->pdo->prepare($query);
         		$this->success = $this->query->execute();
@@ -39,7 +39,7 @@
         	$this->parameters = array();
         }
         
-        public function query_insert($query, $query_params) {
+        public function update($query, $query_params) {
         	try {
         		$this->query = $this->pdo->prepare($query);
         		if($query_params == NULL) {
@@ -52,16 +52,7 @@
         	}
         }
         
-        public function query_update($query) {
-        	try {
-        		$this->query = $this->pdo->prepare($query);
-        		$this->success = $this->query->execute();
-        	} catch(PDOException $ex) {
-        		die();
-        	}
-        }
-        
-        public function query_delete($query) {
+        public function execute($query) {
         	try {
         		$this->query = $this->pdo->prepare($query);
         		$this->success = $this->query->execute();
